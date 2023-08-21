@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300" prefWidth="1000.0" style="-fx-background-color: #F4F4F4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentController">
+
+    <children>
+        <!-- Outer Border -->
+        <Label layoutX="14.0" layoutY="7.0" prefHeight="286.0" prefWidth="976.0" style="-fx-border-color: #B5B5B5; -fx-padding: 10; -fx-border-radius: 10; -fx-background-color: #FFFFFF;" />
+
+        <!-- Header Label -->
+        <Label layoutX="25.0" layoutY="12.0" prefHeight="28.0" prefWidth="204.0" style="-fx-font-weight: bold;" text="Appointments">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+
+        <!-- Appointments Table -->
+        <TableView fx:id="allAppointmentsTable" layoutX="26.0" layoutY="49.0"  prefHeight="200.0" prefWidth="960.0">
+            <columns>
+                <TableColumn fx:id="appointmentID" prefWidth="92.96410369873047" text="Appointment ID" />
+                <TableColumn fx:id="appointmentTitle" prefWidth="57.5" text="Title" />
+                <TableColumn fx:id="appointmentDescription" prefWidth="111.5" text="Description" />
+                <TableColumn fx:id="appointmentLocation" prefWidth="76.5" text="Location" />
+                <TableColumn fx:id="appointmentType" prefWidth="85.0" text="Type" />
+                <TableColumn fx:id="appointmentStart" prefWidth="157.5" text="Start Date/Time" />
+                <TableColumn fx:id="appointmentEnd" prefWidth="138.5" text="End Date/Time" />
+                <TableColumn fx:id="appointmentCustomerID" prefWidth="71.0" text="CustomerID" />
+                <TableColumn fx:id="tableContactID" prefWidth="72.0" text="Contact ID" />
+                <TableColumn fx:id="tableUserID" prefWidth="72.0" text="User ID" />
+            </columns>
+        </TableView>
+
+        <!-- RadioButtons -->
+        <RadioButton fx:id="appointmentWeekRadio" layoutX="516.0" layoutY="262.0" onAction="#appointmentWeekSelected" text="Week">
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentToggleGroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="appointmentMonthRadio" layoutX="602.0" layoutY="262.0" onAction="#appointmentMonthSelected" text="Month" toggleGroup="$appointmentToggleGroup" />
+        <RadioButton fx:id="allAppointmentRadio" layoutX="682.0" layoutY="261.0" onAction="#appointmentAllSelected" selected="true" text="All Appointments" toggleGroup="$appointmentToggleGroup" />
+
+        <!-- Buttons -->
+        <Button fx:id="addAppointment" layoutX="29.0" layoutY="259.0" onAction="#addAppointment" style="-fx-background-color: #0F9D58; -fx-text-fill: white; -fx-border-radius: 5;" text="Add Appointment" />
+        <Button fx:id="updateAppointment" layoutX="164.0" layoutY="260.0" onAction="#updateAppointment" style="-fx-background-color: #4285F4; -fx-text-fill: white; -fx-border-radius: 5;" text="Update Appointment" />
+        <Button fx:id="deleteAppointment" layoutX="319.0" layoutY="261.0" onAction="#deleteAppointment" style="-fx-background-color: #EA4335; -fx-text-fill: white; -fx-border-radius: 5;" text="Delete Appointment" />
+
+    </children>
+</AnchorPane>

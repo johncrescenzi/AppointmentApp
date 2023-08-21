@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="320.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerAddController">
+
+   <!-- Background -->
+   <Label layoutX="5.0" layoutY="8.0" prefHeight="302.0" prefWidth="526.0" style="-fx-border-color: #cccccc; -fx-padding: 10; -fx-border-radius: 10;" />
+
+   <!-- Title -->
+   <Label layoutX="23.0" layoutY="23.0" prefHeight="28.0" prefWidth="186.0" style="-fx-font-weight: bold;" text="Add Customer Record">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+
+   <!-- Customer ID -->
+   <Label layoutX="50.0" layoutY="70.0" text="Customer ID" />
+   <TextField fx:id="addCustomerId" layoutX="170.0" layoutY="70.0" editable="false"/>
+
+   <!-- Customer Name -->
+   <Label layoutX="50.0" layoutY="110.0" text="Customer Name" />
+   <TextField fx:id="addCustomerName" layoutX="170.0" layoutY="110.0" prefWidth="330.0" />
+
+   <!-- Customer Address -->
+   <Label layoutX="50.0" layoutY="150.0" text="Customer Address" />
+   <TextField fx:id="addCustomerAddress" layoutX="170.0" layoutY="150.0" prefWidth="330.0" />
+
+   <!-- Postal Code and Phone -->
+   <Label layoutX="50.0" layoutY="190.0" text="Postal Code" />
+   <TextField fx:id="addCustomerPostalCode" layoutX="170.0" layoutY="190.0" prefWidth="150.0" />
+   <Label layoutX="330.0" layoutY="190.0" text="Phone" />
+   <TextField fx:id="addCustomerPhone" layoutX="390.0" layoutY="190.0" prefWidth="110.0" />
+
+   <!-- Country and State -->
+   <Label layoutX="50.0" layoutY="230.0" text="Country" />
+   <ComboBox fx:id="addCustomerCountry" layoutX="170.0" layoutY="230.0" prefWidth="150.0"  onAction="#addCustomerCountry" />
+   <Label layoutX="330.0" layoutY="230.0" text="State/Province" />
+   <ComboBox fx:id="addCustomerState" layoutX="430.0" layoutY="230.0" prefWidth="70.0" />
+
+   <!-- Buttons -->
+   <Button fx:id="addCustomerRecordsSave" layoutX="340.0" layoutY="270.0" mnemonicParsing="false" onAction="#customerRecordsSaveCustomer" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5;" text="Save">
+   </Button>
+   <Button fx:id="addCustomerRecordsCancel" layoutX="420.0" layoutY="270.0" mnemonicParsing="false" onAction="#customerRecordsCancel" style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-border-radius: 5;" text="Cancel">
+   </Button>
+</AnchorPane>

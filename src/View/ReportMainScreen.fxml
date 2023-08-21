@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="135.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainScreenController">
+   <children>
+      <!-- Main Background Panel -->
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="111.0" prefWidth="981.0" style="-fx-background-color: #f5f5f5; -fx-border-color: #b0b0b0; -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10;" />
+
+      <!-- Main Menu Label -->
+      <Label layoutX="40.0" layoutY="25.0" style="-fx-font-weight: bold; -fx-text-fill: #333;" text="Reports">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <!-- Reports Button -->
+      <Button fx:id="reportsButton" layoutX="40.0" layoutY="66.0" mnemonicParsing="false" onAction="#handleReportsButton" style="-fx-background-color: #2196f3; -fx-text-fill: white; -fx-border-radius: 5px; -fx-padding: 5px 15px;" text="Reports" />
+
+      <!-- Exit Button -->
+      <Button fx:id="exitButton" layoutX="905.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleExitButton" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-border-radius: 5px; -fx-padding: 5px 15px;" text="Exit" />
+   </children>
+</AnchorPane>
